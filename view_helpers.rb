@@ -32,23 +32,21 @@ module ViewHelpers
   def nav_tabs
     content = NavTab.new(:content, "Content")
     content << NavSubItem.new(:pages, "Pages", "/admin/pages/")
+    content << NavSubItem.new(:images, "Images", "/admin/images/")
+    content << NavSubItem.new(:files, "Other Files", "/admin/files/")
     
     design = NavTab.new(:design, "Design")
     design << NavSubItem.new(:layouts, "Layouts", "/admin/layouts/")
     design << NavSubItem.new(:snippets, "Snippets", "/admin/snippets/")
-    
-    media = NavTab.new(:assets, "Assets")
-    media << NavSubItem.new(:images, "Images", "/admin/images/")
-    media << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
-    media << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
-    media << NavSubItem.new(:files, "Other Files", "/admin/files/")
+    design << NavSubItem.new(:stylesheets, "Stylesheets", "/admin/stylesheets/")
+    design << NavSubItem.new(:javascripts, "Javascripts", "/admin/javascripts/")
     
     settings = NavTab.new(:settings, "Settings")
     settings << NavSubItem.new(:general, "General", "/admin/settings/")
     settings << NavSubItem.new(:users, "Users", "/admin/users/")
     settings << NavSubItem.new(:extensions, "Extensions", "/admin/extensions/")
     
-    [content, design, media, settings]
+    [content, design, settings]
   end
   
   def body_classes
