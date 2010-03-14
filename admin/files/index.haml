@@ -1,0 +1,31 @@
+- @selected = :files
+- @title = 'Files - Radiant CMS - Publishing for Small Teams'
+
+.outset
+  %table#files.index
+    %thead
+      %tr
+        %th.files File
+        %th.modify Modify
+    %tbody
+      %tr.node.level_1
+        %td.file
+          %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>""}/
+          %span
+            %a{:href=>"/admin/files/edit", :title=>"/files/press_release.pdf"} press_release.pdf
+        %td.remove
+          %a{:href=>"/admin/files/remove"}
+            Remove
+      %tr.node.level_1
+        %td.file
+          %img.icon{:title=>"", :src=>"/images/admin/page.png", :alt=>""}/
+          %span
+            %a{:href=>"/admin/files/edit", :title=>"/files/flash.swf"} flash.swf
+        %td.remove
+          %a{:href=>"/admin/files/remove"}
+            Remove
+
+#actions
+  %ul
+    %li
+      %a{:href=>"#"} Upload File
